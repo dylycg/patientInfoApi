@@ -1,181 +1,49 @@
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>OrcaApiTest</title>
-    <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="O7IsnLAMjxwkF8fstgk+R1jH/e8dOE0oN97rwSbT9E3MXXQiUkl9jUlpOrej6z9pE+62DQzCbPQbWKxH2gZIgg==" />
-
-    <link rel="stylesheet" media="all" href="/assets/patient.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
-<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
-    <script src="/assets/rails-ujs.self-8944eaf3f9a2615ce7c830a810ed630e296633063af8bb7441d5702fbe3ea597.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/patient.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/application.self-eba3cb53a585a0960ade5a8cb94253892706bb20e3f12097a13463b1f12a4528.js?body=1" data-turbolinks-track="reload"></script>
-  </head>
-
-  <body>
-     <!--生のjsonを表示-->
-<!--<p>-->
-<!--    {
-  &quot;patientinfores&quot;: {
-    &quot;Information_Date&quot;: &quot;2020-09-17&quot;,
-    &quot;Information_Time&quot;: &quot;12:22:14&quot;,
-    &quot;Api_Result&quot;: &quot;00&quot;,
-    &quot;Api_Result_Message&quot;: &quot;処理終了&quot;,
-    &quot;Reskey&quot;: &quot;Patient Info&quot;,
-    &quot;Patient_Information&quot;: {
-      &quot;Patient_ID&quot;: &quot;00003&quot;,
-      &quot;WholeName&quot;: &quot;事例　三&quot;,
-      &quot;WholeName_inKana&quot;: &quot;ジレイ　サン&quot;,
-      &quot;BirthDate&quot;: &quot;1965-08-10&quot;,
-      &quot;Sex&quot;: &quot;2&quot;,
-      &quot;HouseHolder_WholeName&quot;: &quot;事例　十四&quot;,
-      &quot;TestPatient_Flag&quot;: &quot;0&quot;,
-      &quot;Reduction_Reason&quot;: &quot;00&quot;,
-      &quot;Reduction_Reason_Name&quot;: &quot;該当なし&quot;,
-      &quot;Discount&quot;: &quot;00&quot;,
-      &quot;Discount_Name&quot;: &quot;該当なし&quot;,
-      &quot;Condition1&quot;: &quot;00&quot;,
-      &quot;Condition1_Name&quot;: &quot;該当なし&quot;,
-      &quot;Condition2&quot;: &quot;00&quot;,
-      &quot;Condition2_Name&quot;: &quot;該当なし&quot;,
-      &quot;Condition3&quot;: &quot;00&quot;,
-      &quot;Condition3_Name&quot;: &quot;該当なし&quot;,
-      &quot;Ic_Code&quot;: &quot;01&quot;,
-      &quot;Ic_Code_Name&quot;: &quot;現金&quot;,
-      &quot;Community_Cid_Agree&quot;: &quot;False&quot;,
-      &quot;FirstVisit_Date&quot;: &quot;2010-01-31&quot;,
-      &quot;LastVisit_Date&quot;: &quot;2020-09-16&quot;,
-      &quot;HealthInsurance_Information&quot;: [
+{
+  "patientinfores": {
+    "Information_Date": "2020-09-17",
+    "Information_Time": "12:22:14",
+    "Api_Result": "00",
+    "Api_Result_Message": "処理終了",
+    "Reskey": "Patient Info",
+    "Patient_Information": {
+      "Patient_ID": "00003",
+      "WholeName": "事例　三",
+      "WholeName_inKana": "ジレイ　サン",
+      "BirthDate": "1965-08-10",
+      "Sex": "2",
+      "HouseHolder_WholeName": "事例　十四",
+      "TestPatient_Flag": "0",
+      "Reduction_Reason": "00",
+      "Reduction_Reason_Name": "該当なし",
+      "Discount": "00",
+      "Discount_Name": "該当なし",
+      "Condition1": "00",
+      "Condition1_Name": "該当なし",
+      "Condition2": "00",
+      "Condition2_Name": "該当なし",
+      "Condition3": "00",
+      "Condition3_Name": "該当なし",
+      "Ic_Code": "01",
+      "Ic_Code_Name": "現金",
+      "Community_Cid_Agree": "False",
+      "FirstVisit_Date": "2010-01-31",
+      "LastVisit_Date": "2020-09-16",
+      "HealthInsurance_Information": [
         {
-          &quot;Insurance_Combination_Number&quot;: &quot;0001&quot;,
-          &quot;InsuranceCombination_Rate_Admission&quot;: &quot;0.30&quot;,
-          &quot;InsuranceCombination_Rate_Outpatient&quot;: &quot;0.30&quot;,
-          &quot;Insurance_Nondisplay&quot;: &quot;N&quot;,
-          &quot;InsuranceProvider_Class&quot;: &quot;032&quot;,
-          &quot;InsuranceProvider_Number&quot;: &quot;32130213&quot;,
-          &quot;InsuranceProvider_WholeName&quot;: &quot;地公&quot;,
-          &quot;HealthInsuredPerson_Symbol&quot;: &quot;３３３&quot;,
-          &quot;HealthInsuredPerson_Number&quot;: &quot;６０&quot;,
-          &quot;RelationToInsuredPerson&quot;: &quot;2&quot;,
-          &quot;HealthInsuredPerson_WholeName&quot;: &quot;事例　十四&quot;,
-          &quot;Certificate_StartDate&quot;: &quot;2010-01-31&quot;,
-          &quot;Certificate_ExpiredDate&quot;: &quot;9999-12-31&quot;,
-          &quot;Insurance_CheckDate&quot;: &quot;2020-09-14&quot;
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        },
-        {
-        }
-      ]
-    }
-  }
-}-->
-<!--</p>-->
-<pre>
-  {
-  &quot;patientinfores&quot;: {
-    &quot;Information_Date&quot;: &quot;2020-09-17&quot;,
-    &quot;Information_Time&quot;: &quot;12:22:14&quot;,
-    &quot;Api_Result&quot;: &quot;00&quot;,
-    &quot;Api_Result_Message&quot;: &quot;処理終了&quot;,
-    &quot;Reskey&quot;: &quot;Patient Info&quot;,
-    &quot;Patient_Information&quot;: {
-      &quot;Patient_ID&quot;: &quot;00003&quot;,
-      &quot;WholeName&quot;: &quot;事例　三&quot;,
-      &quot;WholeName_inKana&quot;: &quot;ジレイ　サン&quot;,
-      &quot;BirthDate&quot;: &quot;1965-08-10&quot;,
-      &quot;Sex&quot;: &quot;2&quot;,
-      &quot;HouseHolder_WholeName&quot;: &quot;事例　十四&quot;,
-      &quot;TestPatient_Flag&quot;: &quot;0&quot;,
-      &quot;Reduction_Reason&quot;: &quot;00&quot;,
-      &quot;Reduction_Reason_Name&quot;: &quot;該当なし&quot;,
-      &quot;Discount&quot;: &quot;00&quot;,
-      &quot;Discount_Name&quot;: &quot;該当なし&quot;,
-      &quot;Condition1&quot;: &quot;00&quot;,
-      &quot;Condition1_Name&quot;: &quot;該当なし&quot;,
-      &quot;Condition2&quot;: &quot;00&quot;,
-      &quot;Condition2_Name&quot;: &quot;該当なし&quot;,
-      &quot;Condition3&quot;: &quot;00&quot;,
-      &quot;Condition3_Name&quot;: &quot;該当なし&quot;,
-      &quot;Ic_Code&quot;: &quot;01&quot;,
-      &quot;Ic_Code_Name&quot;: &quot;現金&quot;,
-      &quot;Community_Cid_Agree&quot;: &quot;False&quot;,
-      &quot;FirstVisit_Date&quot;: &quot;2010-01-31&quot;,
-      &quot;LastVisit_Date&quot;: &quot;2020-09-16&quot;,
-      &quot;HealthInsurance_Information&quot;: [
-        {
-          &quot;Insurance_Combination_Number&quot;: &quot;0001&quot;,
-          &quot;InsuranceCombination_Rate_Admission&quot;: &quot;0.30&quot;,
-          &quot;InsuranceCombination_Rate_Outpatient&quot;: &quot;0.30&quot;,
-          &quot;Insurance_Nondisplay&quot;: &quot;N&quot;,
-          &quot;InsuranceProvider_Class&quot;: &quot;032&quot;,
-          &quot;InsuranceProvider_Number&quot;: &quot;32130213&quot;,
-          &quot;InsuranceProvider_WholeName&quot;: &quot;地公&quot;,
-          &quot;HealthInsuredPerson_Symbol&quot;: &quot;３３３&quot;,
-          &quot;HealthInsuredPerson_Number&quot;: &quot;６０&quot;,
-          &quot;RelationToInsuredPerson&quot;: &quot;2&quot;,
-          &quot;HealthInsuredPerson_WholeName&quot;: &quot;事例　十四&quot;,
-          &quot;Certificate_StartDate&quot;: &quot;2010-01-31&quot;,
-          &quot;Certificate_ExpiredDate&quot;: &quot;9999-12-31&quot;,
-          &quot;Insurance_CheckDate&quot;: &quot;2020-09-14&quot;
+          "Insurance_Combination_Number": "0001",
+          "InsuranceCombination_Rate_Admission": "0.30",
+          "InsuranceCombination_Rate_Outpatient": "0.30",
+          "Insurance_Nondisplay": "N",
+          "InsuranceProvider_Class": "032",
+          "InsuranceProvider_Number": "32130213",
+          "InsuranceProvider_WholeName": "地公",
+          "HealthInsuredPerson_Symbol": "３３３",
+          "HealthInsuredPerson_Number": "６０",
+          "RelationToInsuredPerson": "2",
+          "HealthInsuredPerson_WholeName": "事例　十四",
+          "Certificate_StartDate": "2010-01-31",
+          "Certificate_ExpiredDate": "9999-12-31",
+          "Insurance_CheckDate": "2020-09-14"
         },
         {
         },
@@ -239,6 +107,3 @@
     }
   }
 }
-</pre>
-  </body>
-</html>
